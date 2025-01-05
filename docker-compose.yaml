@@ -1,11 +1,6 @@
-version: '3'
-
+version: '3.8'
 services:
   jabref:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     environment:
       - REPO_URL=https://github.com/Maryam-Asad19/jabref-checkstyle-docker.git
-    volumes:
-      - ./report:/app/report

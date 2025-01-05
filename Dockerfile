@@ -1,28 +1,31 @@
+
 FROM openjdk:11-jdk
+
 
 RUN apt-get update && apt-get install -y git curl zip
 
-RUN curl -s https://get.sdkman.io | bash -s -- && \
-    echo 'source $HOME/.sdkman/bin/sdkman-init.sh' >> ~/.bashrc && \
-    bash -c "source ~/.bashrc && sdk install gradle"
+
+ENV REPO_URL=https://github.com/Maryam-Asad19/jabref-checkstyle-docker.git
+
 
 WORKDIR /app
 
 
-ARG REPO_URL
 RUN git clone ${REPO_URL} /app
 
 
 WORKDIR /app
 
 
-RUN ./gradlew build
+RUN curl -s https://get.sdkman.io | bash -s -- && \
+    echo 'source $HOME/.sdkman/bin/sdkman-init.sh' >> ~/.bashrc && \
+    source $HOME/.sdkman/bin/sdkman-init.sh && \
+    sdk install gradle
 
 
-RUN ./gradlew checkstyleMain
+RUN sdk install gradle
 
-VOLUME /report
-RUN cp build/reports/checkstyle/main.html /report/
 
-CMD tail -f /dev/null
+CMD ["gradle", "build"]
+
 
