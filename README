@@ -1,0 +1,17 @@
+# Reflexion: Vor- und Nachteile von Docker-Containern
+
+![My Image](./img.webp)
+## Vorteile:
+1. **Portabilität**: Container können auf jeder Maschine mit Docker ausgeführt werden, ohne dass spezifische Anpassungen notwendig sind.
+2. **Schnelligkeit**: Das Erstellen und Starten von Containern ist deutlich schneller als das Starten einer virtuellen Maschine.
+3. **Isolierung**: Container isolieren Anwendungen, was bedeutet, dass sie nicht in Konflikt mit anderen Anwendungen oder der Host-Umgebung geraten.
+4. **Skalierbarkeit**: Docker ermöglicht eine einfache Skalierung von Anwendungen durch Hinzufügen zusätzlicher Container.
+
+## Nachteile:
+1. **Komplexität der Verwaltung**: Besonders in großen Systemen mit vielen Containern kann die Verwaltung und Überwachung kompliziert werden.
+2. **Sicherheitsrisiken**: Container teilen sich den Kernel des Hosts, was zu Sicherheitsproblemen führen kann, wenn ein Container eine Schwachstelle aufweist.
+3. **Abhängigkeit von Docker**: Docker ist eine zusätzliche Abstraktionsschicht, die bei der Fehlerbehebung oder bei der Integration in andere Systeme zusätzliche Komplexität einführt.
+
+
+## Fazit:
+Docker bietet eine großartige Lösung für die Isolierung und Portabilität von Anwendungen, aber es gibt Herausforderungen in Bezug auf Sicherheit und Verwaltung, insbesondere in großen Umgebungen.
