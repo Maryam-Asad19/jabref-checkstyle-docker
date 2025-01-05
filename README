@@ -1,6 +1,5 @@
 # Reflexion: Vor- und Nachteile von Docker-Containern
 
-![My Image](./img.webp)
 ## Vorteile:
 1. **Portabilität**: Container können auf jeder Maschine mit Docker ausgeführt werden, ohne dass spezifische Anpassungen notwendig sind.
 2. **Schnelligkeit**: Das Erstellen und Starten von Containern ist deutlich schneller als das Starten einer virtuellen Maschine.
