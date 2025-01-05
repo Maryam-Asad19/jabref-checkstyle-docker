@@ -18,12 +18,10 @@ WORKDIR /app
 
 
 RUN curl -s https://get.sdkman.io | bash -s -- && \
-    echo 'source $HOME/.sdkman/bin/sdkman-init.sh' >> ~/.bashrc && \
-    source $HOME/.sdkman/bin/sdkman-init.sh && \
+    echo '. $HOME/.sdkman/bin/sdkman-init.sh' >> ~/.bashrc && \
+    . $HOME/.sdkman/bin/sdkman-init.sh && \
     sdk install gradle
 
-
-RUN sdk install gradle
 
 
 CMD ["gradle", "build"]
